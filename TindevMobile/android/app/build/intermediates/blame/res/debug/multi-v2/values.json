@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\tindev\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\420bad76d144494602cd19d31fe9bd87\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
@@ -20,23 +20,6 @@
                         "endLines": "24,4351,5606,5695",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "1334,292876,361676,366887"
-                    }
-                },
-                {
-                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\tindev\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "162,227",
-                        "endColumns": "63,68",
-                        "endOffsets": "221,291"
-                    },
-                    "to": {
-                        "startLines": "634,635",
-                        "startColumns": "4,4",
-                        "startOffsets": "40419,40483",
-                        "endColumns": "63,68",
-                        "endOffsets": "40478,40547"
                     }
                 },
                 {
@@ -116,6 +99,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "231"
+                    },
+                    "to": {
+                        "startLines": "799",
+                        "startColumns": "4",
+                        "startOffsets": "58318",
+                        "endLines": "802",
+                        "endColumns": "12",
+                        "endOffsets": "58495"
+                    }
+                },
+                {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\3eb43dcc83336306d77ef63b3402a327\\appcompat-resources-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,29,36,47,74",
@@ -154,25 +156,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\tindev\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "231"
-                    },
-                    "to": {
-                        "startLines": "799",
-                        "startColumns": "4",
-                        "startOffsets": "58318",
-                        "endLines": "802",
-                        "endColumns": "12",
-                        "endOffsets": "58495"
-                    }
-                },
-                {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\ee0a0f1df6ec82b39c6bd94672681bab\\drawee-2.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,141",
@@ -192,6 +175,40 @@
                     }
                 },
                 {
+                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "43",
+                        "endOffsets": "55"
+                    },
+                    "to": {
+                        "startLines": "670",
+                        "startColumns": "4",
+                        "startOffsets": "42938",
+                        "endColumns": "43",
+                        "endOffsets": "42977"
+                    }
+                },
+                {
+                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\android\\app\\build\\generated\\res\\resValues\\debug\\values\\gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "162,227",
+                        "endColumns": "63,68",
+                        "endOffsets": "221,291"
+                    },
+                    "to": {
+                        "startLines": "634,635",
+                        "startColumns": "4,4",
+                        "startOffsets": "40419,40483",
+                        "endColumns": "63,68",
+                        "endOffsets": "40478,40547"
+                    }
+                },
+                {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\a25b01144be0941df6bba7293d8c0f17\\transition-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -206,23 +223,6 @@
                         "startOffsets": "37167,37207,37600,37782,37837,38721,38775,38827,38876,38937",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "37202,37249,37638,37832,37879,38770,38822,38871,38932,38982"
-                    }
-                },
-                {
-                    "source": "C:\\Estudos\\Tindev\\Tindev\\TindevMobile\\tindev\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "43",
-                        "endOffsets": "55"
-                    },
-                    "to": {
-                        "startLines": "670",
-                        "startColumns": "4",
-                        "startOffsets": "42938",
-                        "endColumns": "43",
-                        "endOffsets": "42977"
                     }
                 },
                 {
@@ -262,7 +262,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\5efe502e2efce10576042141b2058aeb\\jetified-react-native-0.62.2\\res\\values\\values.xml",
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\transforms-2\\files-2.1\\b5c67e769c385f459f59308008cd4dab\\jetified-react-native-0.62.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,73,77,80,83,86,89,93,97,100,103,106,109,110,111,119,126,133,136,139,142,148",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

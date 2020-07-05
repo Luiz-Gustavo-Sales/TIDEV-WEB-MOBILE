@@ -10,26 +10,22 @@ import {
 } from 'react-native';
 //importando a LOGO do APP
 import logo from '../assets/logo.png';
-import Main from './main';
 //importando API
 import api from '../services/api';
-import {useRoute} from '@react-navigation/native';
+//import {asin} from 'react-native-reanimated';
 const login = ({navigation: {navigate}}) => {
   const [user, setUser] = useState('');
+  const [userPerfil, setUserPerfil] = useState([]);
   useEffect(() => {
     try {
       AsyncStorege.getItem('user').then((user) => {
         if (user) {
-          navigate('Routes', { screen: 'Perfil', params: {user}});
-          navigate('Routes', { screen: 'Main', params: {user}});
-         
+          navigate('Routes', {screen: 'Main', params: {user}});
         }
-       
       });
       //deixando o [] - vazio vai se executado apenas uma vez
     } catch (error) {
-
-      console.log("erro bem aqui no useEffect Login",error)
+      console.log('erro bem aqui no useEffect Login', error);
     }
   }, []);
 
@@ -41,16 +37,17 @@ const login = ({navigation: {navigate}}) => {
       const {_id} = response.data;
       //uma função assincona, vai salvar o usuário cadastrado
       await AsyncStorege.setItem('user', _id);
+      AsyncStorege.setItem('perfil',JSON.stringify(response.data));
       //passando ID como parametro para a rota
       //usando setUser limpado o dado quando volta
       //navigate('Main', {user: _id});
-      navigate('Routes', { screen: 'Main', params: {user: _id}});
-     
+
+      navigate('Routes', {screen: 'Main', params: {user: _id}});
     } catch (error) {
       console.log('DEU ERRO no handleLogin', error);
     }
-
   }
+
   /*
 usando  onppress no botão (ENVIAR) para chamar a função para fazer login dos devs no APP
 

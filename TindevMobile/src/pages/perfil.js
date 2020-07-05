@@ -10,53 +10,39 @@ import {
   TouchableOpacity,
   findNodeHandle,
 } from 'react-native';
-import {useRoute} from '@react-navigation/native';
-import api from '../services/api';
-const Perfil = ({navigation: {navigate}}) => {
-  const route = useRoute();
-  const id = route.params.user;
-  const [users, setUsers] = useState([]);
-  console.log('VERIFICAR O NOME ' + id);
 
+const Perfil = () => {
+  const [userPerfil, setPerfil] = useState('');
   useEffect(() => {
-    try {
-    
-    async function UserPerfil() {
-    
-      const response = await api.get('/devs', {
-        headers: {
-          user: id,
-        },
-      });
-      setUsers(response.data);
-    }
-    UserPerfil();
-  } catch (error) {
-      console.log('ERRO NO USEREFFECT')
-  }
-  
-  }, [id]);
+    const getUser = async () => {
+      try {
+        let user = await AsyncStorege.getItem('perfil');
 
+       await setPerfil(JSON.parse(user));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getUser();
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.containerCards}>
-        {users.map((user) => (
-          <View key={user._id} style={styles.cards}>
-            <Image
-              alt={user.nameUser}
-              style={styles.avatar}
-              source={{
-                uri: user.avatar,
-              }}
-            />
-            <View style={styles.footer}>
-              <Text style={styles.nameUser}>{user.name}</Text>
-              <Text style={styles.BioUser} numberOfLines={2}>
-                {user.bio}
-              </Text>
-            </View>
+        <View style={styles.cards}>
+          <Image
+            alt={userPerfil.nameUser}
+            source={{
+              uri: userPerfil.avatar,
+            }}
+            style={styles.avatar}
+          />
+          <View style={styles.footer}>
+            <Text style={styles.nameUser}>{userPerfil.user}</Text>
+            <Text style={styles.BioUser} numberOfLines={2}>
+              {userPerfil.bio}
+            </Text>
           </View>
-        ))}
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -71,7 +57,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#DDD',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -84,7 +70,8 @@ const styles = StyleSheet.create({
   },
   cards: {
     borderColor: '#DDD',
-    borderRadius: 8,
+   borderTopLeftRadius: 800,
+    borderTopRightRadius:800 ,
     margin: 30,
     overflow: 'hidden',
     position: 'absolute',
