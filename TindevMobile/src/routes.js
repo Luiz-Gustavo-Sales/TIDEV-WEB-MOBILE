@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
-//import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Feather';
+import LinearGradient from 'react-native-linear-gradient';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -13,7 +14,27 @@ import Perfil from './pages/perfil'
 function TabBottom(isSigned=false) {
 
   return (
-    <Tab.Navigator initialRouteName={isSigned ? 'Main' : 'Perfil'}>
+    <Tab.Navigator screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName;
+  
+        switch (route.name) {
+          case 'Main':
+            iconName = 'home';
+            break;
+          case 'Perfil':
+            iconName = 'user';
+            break;
+        
+        }
+  
+        return <Icon name={iconName} size={size} color={color} />;
+      },
+    })}
+      tabBarOptions={{
+      activeTintColor: '#DF4723',
+      inactiveTintColor: '#777',
+    }} >
       <Tab.Screen  name="Main" component={Main} ptions={{tabBarLabel:'Main'}}/>
       <Tab.Screen name="Perfil" component={Perfil}  options={{tabBarLabel:'Perfil'}}/>
     </Tab.Navigator>

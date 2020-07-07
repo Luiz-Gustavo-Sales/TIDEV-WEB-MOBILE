@@ -18,7 +18,8 @@ const Perfil = () => {
       try {
         let user = await AsyncStorege.getItem('perfil');
 
-       await setPerfil(JSON.parse(user));
+        await setPerfil(JSON.parse(user));
+        console.log(user)
       } catch (error) {
         console.log(error);
       }
@@ -44,6 +45,10 @@ const Perfil = () => {
           </View>
         </View>
       </View>
+          <View>
+          <Text>{userPerfil.likes}</Text>
+          </View>
+
     </SafeAreaView>
   );
 };
@@ -57,7 +62,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#DDD',
+    backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -70,8 +75,6 @@ const styles = StyleSheet.create({
   },
   cards: {
     borderColor: '#DDD',
-   borderTopLeftRadius: 800,
-    borderTopRightRadius:800 ,
     margin: 30,
     overflow: 'hidden',
     position: 'absolute',
